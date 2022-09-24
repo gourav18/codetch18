@@ -1,36 +1,36 @@
 <div (click)="side()">
   sdf
 </div>
-<div> 
-    <mat-toolbar color="primary">
-      <div fxShow="true" fxHide.gt-sm="true">
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-  
-      <a mat-button class="companyName"  (click)="side()">
-        <span>Code Tech</span>
-      </a>
-      <span class="example-spacer"></span>
-      <div fxShow="true" fxHide.lt-md="true">
+<div>
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyName" (click)="side()">
+      <span>Code Tech</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="/about-us">About us</a>
+
+      <a mat-button routerLink="/contact">Contact</a>
+    </div>
+
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
         <a mat-button routerLink="/about-us">About us</a>
-        
         <a mat-button routerLink="/contact">Contact</a>
       </div>
-  
-    </mat-toolbar>
-    <mat-sidenav-container fxFlexFill class="example-container">
-  
-      <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
-        <div fxLayout="column">
-          <a mat-button routerLink="/about-us">About us</a>
-          <a mat-button routerLink="/contact">Contact</a>
-        </div>
-      </mat-sidenav>
-      <mat-sidenav-content fxFlexFill>
-        Awesome content
-        <button (click)="side()">sdgf</button>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      Awesome contents
+      <button (click)="side()">sdgf</button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
