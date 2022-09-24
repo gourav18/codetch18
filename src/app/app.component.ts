@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'codetech1827';
+
+  sidenav(){
+    alert('ok');
+    console.log('ok')
+  }
+
 }
